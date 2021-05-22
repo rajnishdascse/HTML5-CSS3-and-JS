@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date and time object in JS</title>
+<script>
+            function bodyload(){
+			   var name = prompt("Enter name");
+			  
+			   
+			   
+			   
+			   var today = new Date();
+			   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+			   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+			   			   
+			   
+			   document.getElementById("p1").innerHTML = date;
+			   document.getElementById("p2").innerHTML = time;
+			   document.getElementById("uname").innerHTML = "Hello " +name;
+			   
+			   
+			   }
+</script>
+<body onload="bodyload()">
+  <div align="center">
+     <h2 id="uname"></h2>
+	 <p id="p1"></p>
+	 <p id="p2"></p>
+	 </div>
+	 
+</body>
+</html>

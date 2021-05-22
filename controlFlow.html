@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Control flow in jS</title>
+<script>
+     function selectHdd(){
+	      var HDD = document.getElementById("HDD");
+		  var txtRam = document.getElementById("txtRam");
+		   
+		   if(parseInt(HDD.value)>=5)
+		   //if(HDD.value>=5)      <!--this condition is also applicable-->
+		      {
+			     txtRam.disabled = false;
+				 HDD.disabled = true;
+			   }
+			}   
+			function selectRams(){
+			    var txtRam = document.getElementById("txtRam");
+				var Graphic = document.getElementById("Graphic");
+				
+				if(txtRam.value>=4)
+				{
+					Graphic.disabled = false;
+				    txtRam.disabled = true;
+					}
+			  }
+			  
+			  function selectGraphics(){
+			      var Graphic = document.getElementById("Graphic");
+				  var button = document.getElementById("btnInstall");   <!--use the var name different for button-- >
+				  
+				  if(Graphic.value == "Yes")
+				  {
+					 btn.disabled=false;     <!-- when "if" condition will be satisfied button will allow to click (this is what false condition is doing here) ->
+				     Graphic.disabled = true;   <!--when we use true it will disabled the selected item-->
+					}
+				}
+				
+				function install()
+				{
+				   document.write("game installed successfully");
+				   }
+				  
+		
+</script>
+</head>
+<body>
+  <div>
+     <fieldset>
+	     <legend>Game Install</legend>
+	<dl>	 
+		 <dt>Select available hard disk space</dt>
+		 <dd>
+		    <select id="HDD" onchange="selectHdd()">
+			 <option value="2">2GB</option>
+			 <option value="5">5GB</option>
+			 <option value="10">10GB</option>
+			 </select></dd>
+		 
+		     <dt>Select available Ram</dt>
+			 <dd>
+			 <input type="number" id="txtRam" value="1" min="1" max="16" disabled onchange="selectRams()">
+			 </dd>
+			 
+			 <dt>Is graphic card available</dt>
+			  <dd>
+			  <select id="Graphic" disabled onchange="selectGraphics()">
+			     <option value="No">No</option>
+				 <option value="Yes">Yes</option>
+			   </select>
+			  </dd>
+			  <br>
+			  
+			  
+			      <input type="button" value="Install" id="btn" disabled onclick="install()">
+        </dl>
+		 </fieldset>
+	</div>
+</body>
+</html>

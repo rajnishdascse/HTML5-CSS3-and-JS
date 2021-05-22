@@ -1,0 +1,83 @@
+<!DOCTYPE html
+<html>
+<head>
+<title>Registration form</title>
+</head>
+
+<body>
+
+  <form>
+	<!-- <table align="center" height="300" width="400" border="1"> -->
+<table align="center">
+     <caption><b>Registration form</b></caption>
+	 <tr>
+	     <td>Name</td>
+		 <td>
+		    <Input type="text" name="text name" placeholder="maximum 10 character" autofocus required maxlength="10" size="20" pattern="[A-Z]">
+	 </tr>
+	 
+	  <td>Password</td>
+	    <td>
+		    <Input type="password" name="text password" placeholder="maximum 4-10 character" required pattern="[a-A-Z]">
+		</td>
+	
+	<tr><td>Age</td>
+		<td>
+		<input type="number" name="age" min="12" max="21" value="2">
+		</td></tr>
+	
+    	<tr>
+	       <td>Email-id</td>
+		    <td><input type="text" name= "Email-id"></td>
+	   </tr>
+	   
+	   <tr>
+	      <td>Country</td>
+		 <td> <input type="txt-list" list="country">
+		    <datalist id="country">
+			   <option>India</option>
+			   <option>USA</option>
+			   <option>UK</option>
+			   <option>DUBAI</option>
+			   <option>CHINA</option>
+			   <option>London</option>
+			</datalist></td>
+		</tr>
+		
+	<tr>
+		<td>Type range</td>
+		 <td><Input type="range" name="txt range"></td>
+    </tr>
+	
+	
+	<tr>
+	    <td>Upoload photo</td>
+		 <td><Input type="file" name="text file"></td>        <!--in the input type "file" is main to show the upload option-->
+	</tr>
+	
+	
+	 <tr>
+	    <td>Fav color</td>
+		<td><input type="color" align="center" value="select"></td>
+	
+	<tr>
+	 <td colspan="2" align="center">
+	 <input type="submit" value="Register"></td>
+	 
+	</table>
+	</form>
+	
+<!--Listbox code-->
+
+<b>list box</b>	
+<div>	
+	<select size="2"  multiple>
+	    <option value="value" disabled>Delhi</option>    <!--cant select the option but its visible-->
+		<option value="value" disabled>Mumbai</option>
+		<option>Bangalore</option>
+		<option selected>Assam</option>
+		<option>GOA</option>
+		</select>
+	</div>
+</body>
+</html>

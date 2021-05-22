@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS event handler This</title>
+<script>
+    function btn(obj,e){
+	     document.write("button name:" +obj.name+ "<br>"+ "button value: "+obj.value+ "<br>" +"Clicked at x :" + e.clientx);
+      }
+</script>
+</head>
+<body>
+       <input type="button" value="Click" name="btnsubmit" onclick="btn(this,event)">
+</body>
+</html>

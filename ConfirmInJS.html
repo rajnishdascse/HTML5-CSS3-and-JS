@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Confirm function in JS</title>
+<script>
+   function deleteFunction(){
+        x = confirm("Record will be deleted");
+		(x==true)?
+		alert("Record deleted") : alert("Action Canceled");
+		}
+</script>
+</head>
+<body>
+   <div>
+   <form>
+       <input type= "button" value="Delete" onclick="deleteFunction()">
+	</form>
+	</div>
+</body>
+</html>

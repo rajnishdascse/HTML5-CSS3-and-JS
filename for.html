@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For loop</title>
+<script>
+        function checkUser(){
+		      var users = [ {Name: 'Raj'},
+			                {Name: 'John'},
+							{Name: 'Ritika'},
+							{Name: 'Alice'}]
+				var userName = document.getElementById("txtName").value;
+				var msg = document.getElementById("msg");
+				
+				for(var i=0; i<users.length; i++)
+				{
+				   if(userName==users[i].Name)
+				   {
+				      msg.innerHTML	= "User name is already in use";
+					  return;
+					  }
+					  else{
+					        msg.innerHTML = "Available";
+							}
+					}
+			}
+</script>
+</head>
+<body>
+        <div>
+		     <dl>
+			    <dt>Name</dt>
+				    <input type="text" id="txtName" onkeyup="checkUser()">
+					<span id= "msg"></span>
+		</div>
+		   
+</body>
+</html>

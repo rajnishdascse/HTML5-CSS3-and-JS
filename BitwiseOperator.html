@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bitwise operation</title>
+<script>
+    function login(){
+	    var uname = document.getElementById("txtName").value;
+		var pwd = document.getElementById("txtpwd").value;
+		
+		var msg = document.getElementById("msg");
+		var userdetails = {userName: "Raj", password : "admin"};
+		
+		(uname == userdetails.userName && pwd == userdetails.password)?
+		document.write("Login success") : msg.innerHTML ="Enter a valid Username/password";
+		}
+		
+</script>
+</head>
+<body>
+    <fieldset>
+	    <legend>Login Details</legend>
+		<dl>
+		 <dt>UserName</dt>
+		 <dd><input type="text" id="txtName"></dd><br>
+		 <dt>Password</dt> 
+		 <dd><input type="password" id="txtpwd"></dd>
+
+		 </dl>
+		 <input type="button" value="Login" onclick="login()">
+	</fieldset>
+	<div align="center">
+	<h2 id="msg"></h2>
+	</div>
+</body>
+<html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date object </title>
+
+                                       <!---Not working image and date-->
+
+<script>
+            function bodyload(){
+			   var name = prompt("Enter name");
+			   var days = ["Sunday", "Monday", "Tuesday", "Wedness day", "Thursday", "Friday", "Saturday"];
+			   var 	months = ["Jan", "Feb", "March", "april", "May", "June", "july", "Augst", "September", "Oct", "Nov", "Dec"];
+			
+			   
+			   var now = new Date();
+			   var weekday = now.getDay();
+			   var day  = now.getDate();
+			   var month = now.getMonth();
+			   var year = now.getFullyear();
+				
+				var today = days[weekday]+" "+ day+","+ months[month]+" "+ year;
+				
+				document.getElementById("msg").innerHTML = today;
+				var pic = document.getElementById("pic");
+				 
+				document.getElementById("uname").innerHTML = "Hello "+name;
+				var hrs = now.getHours()
+				
+				if (hrs>=5 && hrs<12)
+				   {
+				      pic.src = "Images/car.jpg";
+					  }
+					  
+					  else if (hrs>=12 && hrs<17)
+					  {
+					     pic.src = "Images/love.jpg";
+						 }
+						 else if(hrs>17 && hrs<=23)
+						 {
+						     pic.src="Images/house.jfif";
+							 }
+			}
+			  
+			  
+			
+</script>
+
+</head>
+	
+<body onload="bodyload()">
+      <div id="msg" align="center"></div>
+	  <div align="center">
+	     <h2 align="center" id="uname"></h2>
+		 <br><br>
+		 <img src = "" id="pic" width="300" height="300">
+		 </div>
+	       
+</body>
+</html>

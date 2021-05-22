@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Control flow demo</title>
+<script>
+
+<!---done by me when the bug was not found--->
+<!--Demo program-->
+
+        function hardDisk(){
+		     var HDD = document.getElementById("HDD");
+			 var txtRam = document.getElementById("txtRam");
+			 
+			  if(HDD.value>=5)
+			  {
+			      txtRam.disabled = false;
+				  HDD.disabled = true;
+				  }
+			}
+ 
+        function ram(){
+		       var txtRam = document.getElementById("txtRam");
+			   var Graphic = document.getElementById("Graphic");
+			   
+			   if(txtRam.value >=4)
+			   {
+			      txtRam.disabled = true;
+				  Graphic.disabled = false;
+				  }
+				  
+			}	  
+			
+			function Graphics(){
+			     var Graphic = document.getElementById("Graphic");
+				 var btn = document.getElementById("btnInstall");
+				  
+				  if(Graphic.value == "Yes")
+				  {
+					 btnInstall.disabled= false;
+				     Graphic.disabled = true;
+					}
+				}
+				
+				function install()
+				{
+				   document.write("game installed successfully")
+				   }
+		ram();		  
+</script>
+</head>
+<body>
+
+<div>
+ <fielset>
+	     <legend>Game Install</legend>
+	<dl>	 
+		 <dt>Select available hard disk space</dt>
+		 <dd>
+		    <select id="HDD" onchange=" hardDisk()">
+			 <option value="2">2GB</option>
+			 <option value="5">5GB</option>
+			 <option value="10">10GB</option>
+			 </select></dd>
+ 
+
+   <dt>Select available Ram</dt>
+			 <dd>
+			 <input type="number" id="txtRam" value="1" min="1" max="16" onchange="ram()">
+			 </dd>
+			  <dd>
+			  <select id="Graphic"  disabled onchange="Graphics() ">
+			     <option value="No">No</option>
+				 <option value="Yes">Yes</option>
+			   </select>
+			  </dd>
+			  <br>
+			  			      <input type="button" value="Install" id="btnInstall" disabled onclick="install()"> 
+							  </dl>
+
+	</fielset>
+	</div>
+</body>
+</html>

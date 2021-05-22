@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array concept in images</title>
+<script>
+ function productDetails(){
+	  var ProductName= document.getElementById("ProductName");
+	  var pic = document.getElementById("pic");
+	  var imgRange=document.getElementById("imgRange");
+	  
+      var ProductNames=["Gym", "Girl", "Car", "Mobile", "House"];
+	  var productImages=["Images/gym.jpg", "Images/love.jpg", "Images/car.jpg", "Images/mobile.jpg", "Images/house.jfif"];
+	  
+	  ProductName.innerHTML= ProductNames[imgRange.value];
+	  pic.src= productImages[imgRange.value];
+	}
+</script>
+
+<style>
+     td{
+	     background-color: black;
+		 color: red;
+		 font-weight:bold;
+		 }
+	 
+</style>
+</head>
+<body>
+      <div>
+	     <table width="500" border="2" cellspacing="5" cellpadding="5" align="center" >
+		 <tr>
+		    <td align="center" id="ProductName"></td>        <!--top table product name codes-->
+		</tr>
+		    <tr>
+			  <td align="center">
+			     <img id="pic" src="Images/gym.jpg" width="500" height="400">
+			  </td>
+			</tr>
+			<td align="center">
+			   <input type="range" id="imgRange" min="0" max="4" value="0" onchange="productDetails()">
+			  </td>
+		</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>get the user ip</title>
+</head>
+<script>
+     function getDetails(){
+	          document.getElementById("details").style.display = "block";
+			  document.getElementById("host").innerHTML = location.host;       //.host is a predefined function 
+			  var msg =" ";
+			  
+			  switch(location.protocol)
+			  {
+			      case "http:":
+				  msg = "Page is accessed from server and secured";
+				  break;
+				  case "file:":
+				  msg = "Page is not access from server";
+				  break;
+				 }
+				 
+			document.getElementById("protocol").innerHTML= location.protocol+"<br>" +msg;
+			document.getElementById("url").innerHTML= location.host;
+		}
+			
+			
+</script>
+<body>
+<div>
+     <div align ="center">
+	      <input type = "button" value="Get client details" onclick="getDetails()">
+		  <input type="button" value = "Refresh" onclick="location.reload()">
+	</div>
+	   <div id="details" style="display: none">
+	   <dl>
+	       <dt>Server Name</dt>
+		     <dd id="host"></dd>
+			<dt>protocol</dt>
+			<dd id= "protocol"></dd>
+			<dt>URL</dt>
+			<dd id="url"></dd>
+		</dl>
+	</div>
+</div>
+	    
+</body>
+</html>
